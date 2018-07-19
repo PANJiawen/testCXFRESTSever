@@ -2,6 +2,7 @@ package server;
 
 import javax.jws.WebService;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -21,5 +22,10 @@ public interface TestInterface {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN) 
 	public String hello();
+	
+	@Path("/postxml/{xml}")
+	@POST
+	@Produces({MediaType.TEXT_PLAIN,MediaType.TEXT_XML}) 
+	public String postxml(@PathParam("xml")String xml);
 	
 }

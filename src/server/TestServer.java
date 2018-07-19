@@ -12,5 +12,6 @@ public class TestServer {
 		jAXRSServerFactoryBean.setResourceClasses(TestInterfaceImpl.class);
 		jAXRSServerFactoryBean.setServiceBean(new TestInterfaceImpl());
 		jAXRSServerFactoryBean.create();
+		System.out.println("Server is ready!");
 }
 }

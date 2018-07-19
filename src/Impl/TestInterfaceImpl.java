@@ -16,4 +16,11 @@ public class TestInterfaceImpl implements TestInterface {
 		return "wtf";
 	}
 
+	@Override
+	public String postxml(String xml) {
+		// TODO Auto-generated method stub
+		System.out.println(xml);
+		return "xml is arrived";
+	}
+
 }
